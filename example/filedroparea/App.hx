@@ -7,6 +7,7 @@ import om.input.FileDropArea;
 
 class App {
 
+	/*
 	static function loadFiles( list : FileList, i = 0 ) {
 		var file = list[i];
 		switch file.type {
@@ -24,15 +25,32 @@ class App {
 			trace( 'Invalid file type' );
 		}
 	}
+	*/
 
     static function main() {
+
         window.onload = function(){
-			var fileDropArea = new FileDropArea( document.getElementById( 'file-drop-area' ) );
-			fileDropArea.onInput = function(list) {
-				trace( list );
-				loadFiles( list );
+
+			var element = document.getElementById( 'file-drop-area' );
+			var fileDropArea = new FileDropArea( element );
+			fileDropArea.onEvent = function(e) {
+				switch e.type {
+				case 'dragenter': element.style.background = '#f0f0f0';
+				case 'dragleave': element.style.background = '#616161';
+				case 'drop':
+					var files = e.dataTransfer.files;
+					var info = document.getElementById( 'info' );
+					for( i in 0...files.length ) {
+						var f = files[i];
+						var e = document.createDivElement();
+						e.textContent = f.name + ' - '+f.lastModifiedDate;
+						info.appendChild(e);
+					}
+					element.style.background = '#73C990';
+					haxe.Timer.delay( function() element.style.background = '#616161', 600 );
+				}
 			}
-			fileDropArea.start();
+			fileDropArea.activate();
         }
     }
 }
