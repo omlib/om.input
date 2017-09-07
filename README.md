@@ -1,2 +1,4 @@
 
-# OM|INPUT
+# OM.INPUT
+
+User input helpers.
