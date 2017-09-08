@@ -1,4 +1,4 @@
 
 # OM.INPUT
 
-User input helpers.
+> User input tools.

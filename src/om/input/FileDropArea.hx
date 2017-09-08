@@ -5,10 +5,12 @@ import js.html.DragEvent;
 import js.html.Element;
 //import js.html.FileList;
 
+/**
+*/
 class FileDropArea implements om.Disposable {
 
 	public dynamic function onEvent( e : DragEvent ) {}
-
+	
 	public var target(default,null) : Element;
 	public var active(default,null) = false;
 
@@ -16,7 +18,7 @@ class FileDropArea implements om.Disposable {
 		this.target = target;
 	}
 
-	public function activate() {
+	public function init() {
 
 		if( active )
 			return;
