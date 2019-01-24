@@ -3,7 +3,7 @@
     "version": "0.0.0",
     "description": "User input helpers",
     "tags": ["om","input"],
-    "url": "https://github.com/tong/om.input",
+    "url": "https://github.com/omlib/om.input",
     "license": "OM",
     "contributors": ["tong"],
     "releasenote": "See CHANGELOG",
