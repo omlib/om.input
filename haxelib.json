@@ -9,7 +9,6 @@
     "releasenote": "See CHANGELOG",
     "classPath" : "src/",
     "dependencies": {
-        "om.core": "",
-        "om.audio": ""
+        "om.core": ""
     }
 }

@@ -3,7 +3,6 @@ package om.input;
 import js.html.midi.MIDIInput;
 import js.html.midi.MIDIInputMap;
 import js.html.midi.MIDIMessageEvent;
-import om.audio.MIDI;
 
 @:enum abstract Channel(Int) from Int to Int {
 
