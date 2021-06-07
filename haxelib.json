@@ -1,14 +1,15 @@
 {
     "name": "om.input",
     "version": "0.0.0",
-    "description": "User input helpers",
+    "description": "User input tools",
     "tags": ["om","input"],
     "url": "https://github.com/omlib/om.input",
-    "license": "OM",
+    "license": "Public",
     "contributors": ["tong"],
     "releasenote": "See CHANGELOG",
     "classPath" : "src/",
     "dependencies": {
-        "om.core": ""
+        "om.core": "",
+        "om.audio": ""
     }
 }
